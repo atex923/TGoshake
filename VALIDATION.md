@@ -27,7 +27,7 @@ work/v003-test/Logs/Test/Test-TGoshake-2026.09.24_21-28-02-+0800.xcresult
 Visual evidence:
 
 ```text
-work/TGoshake_V0.0.3_home.png
+work/TGoshake_V0.0.3_final_home.png
 TGoshake_V0.0.3/TGoshake/Assets.xcassets/AppIcon.appiconset/TGoshake-AppIcon-1024.png
 ```
 
