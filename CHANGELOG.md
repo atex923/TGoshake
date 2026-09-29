@@ -1,5 +1,13 @@
 # Changelog
 
+## V0.0.4 — 2026-09-28
+
+- Renamed the Settings version section to `關於`.
+- Standardized the visible version as `V0.0.4(20260928)`.
+- Read the marketing version from the built app bundle so the Home and Settings displays stay aligned with Xcode metadata.
+- Added the reusable `ios-app-about-screen` skill for future native SwiftUI iOS app creation and explicit migrations.
+- Advanced the app to version 0.0.4, build 4.
+
 ## V0.0.3 — 2026-09-24
 
 - Moved pause/resume and stop controls to the first row of the recording screen.

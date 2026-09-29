@@ -41,7 +41,7 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                 }
 
-                Section("版本") {
+                Section("關於") {
                     LabeledContent("英文名稱", value: "TGoshake")
                     LabeledContent("中文名稱", value: "火車搖起來")
                     LabeledContent("版本", value: AppInfo.displayVersion)

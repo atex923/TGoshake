@@ -3,8 +3,10 @@ import CoreLocation
 import SwiftUI
 
 enum AppInfo {
-    static let version = "0.0.3"
-    static let buildDate = "20260925"
+    static var version: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.0.4"
+    }
+    static let buildDate = "20260928"
     static let developer = "Atex Lin"
     static let feedbackEmail = "atexapp.lin@gmail.com"
     static var displayVersion: String { "V\(version)(\(buildDate))" }

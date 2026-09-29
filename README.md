@@ -1,4 +1,4 @@
-# TGoshake / 火車搖起來 V0.0.3
+# TGoshake / 火車搖起來 V0.0.4
 
 TGoshake 將 iPhone 作為列車乘坐振動熱點篩查器，同步記錄 Device Motion、GPS、速度、定位精度與使用者主觀感受打卡。
 
@@ -23,6 +23,8 @@ TGoshake 將 iPhone 作為列車乘坐振動熱點篩查器，同步記錄 Devic
 - 放置位置支援機車頭、機車尾，座位維持手動輸入
 - 歷史行程支援向左滑動刪除，刪除前會再次確認並說明無法復原
 - 使用專屬 1024 × 1024 不透明 App 圖示
+- 設定頁以「關於」統一呈現中英文名稱、`V#.#.#(YYYYMMDD)`、程式設計者與使用回饋信箱
+- 顯示版本直接讀取 App Bundle 的 marketing version，避免畫面與建置版本分離
 - 來源資料與分析結果分離；無 GPS 時仍保存 Motion
 
 ## 開啟與建置
@@ -55,14 +57,16 @@ xcodebuild -project TGoshake.xcodeproj \
   - 過短資料不建立分析窗
   - 濾波遇到時間缺口仍保持數量及有限數值
   - 車種對應車廂上限及「其他」手動輸入規則正確
-- iPhone 16 模擬器：安裝及啟動成功，首頁已目視檢查
+- iPhone 16 模擬器：安裝及啟動成功，首頁已目視確認 `V0.0.4(20260928)` 且無明顯裁切
+- 建置後 metadata：bundle ID `com.atex1.TGoshake`、version `0.0.4`、build `4`
+- 設定頁「關於」欄位已通過原始碼與編譯檢查；本輪因 Mac 鎖定，尚未完成設定頁互動目視驗證
 
 ## 目前限制
 
 - iOS deployment target 為 17.0，使用 SwiftUI MapKit overlays。
 - 模擬器沒有可代表實機的 Device Motion。
 - 目前藍牙輸入支援 Apple Game Controller profile；一般自拍器不保證相容。
-- V0.0.3 採前景記錄，沒有鎖屏背景持續 Motion 保證。
+- V0.0.4 採前景記錄，沒有鎖屏背景持續 Motion 保證。
 - 車種與廂數是操作用預設值，實際編組異動時請使用「其他」手動輸入。
 - 分享目前以完整 `.tgoshake` session package 為單位，尚未加入可移除 GPS 的 ZIP 匯出器。
 - 相對顏色不是軌道故障、安全或 ISO／EN 合規判定。
